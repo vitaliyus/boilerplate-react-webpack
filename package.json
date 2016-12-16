@@ -15,9 +15,13 @@
     "react-dom": "^15.4.0"
   },
   "devDependencies": {
+    "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.8",
     "clean-webpack-plugin": "^0.1.14",
     "css-loader": "^0.26.0",
+    "eslint": "^3.12.2",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-react": "^6.8.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "html-loader": "^0.4.4",
@@ -36,7 +40,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "set NODE_ENV='production' && webpack -p",
     "webpack-devserver": "webpack-dev-server --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline --content-base public --port 8050 --host 0.0.0.0",
-    "nodemon": "set NODE_PATH=./src; && set NODE_ENV='develop' && nodemon server.js"
+    "nodemon_win": "set NODE_PATH=./src; && set NODE_ENV='develop' && nodemon server.js",
+    "nodemon_linux": "NODE_PATH=./src NODE_ENV='develop' nodemon server.js"
   },
   "author": "Vitaliy Bilous",
   "license": "ISC"
