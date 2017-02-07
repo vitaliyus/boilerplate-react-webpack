@@ -1,0 +1,13 @@
+/*
+* {{ properCase name }} Actions
+*
+* This contains all the text for the {{ properCase name }} component.
+*/
+import { fork, take, call, put, race } from 'redux-saga/effects';
+import * as actions from './actions.js';
+
+function* generator(){}
+
+export default function* mainSaga() {
+  yield [fork(generator)];
+};

@@ -3,6 +3,16 @@
  */
 import React      from 'react';
 import ReactDOM   from 'react-dom';
-import App        from 'components/App';
+import { Provider } from 'react-redux';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
-ReactDOM.render(<App />, document.getElementById('react-view'));
+import App        from './components/App';
+import configureStore from './configureStore';
+
+ReactDOM.render(<Provider store={configureStore()}>
+  <Router history={hashHistory}>
+    <Route path='/' component={App} />
+    <IndexRoute component={App}/>
+  </Router>
+</Provider>,
+  document.getElementById('react-view'));
